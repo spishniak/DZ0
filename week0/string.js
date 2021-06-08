@@ -1,10 +1,10 @@
 // instead of **** put your name and last name;
 
-const firstName = '****;'
-const lastName = '*****';
+const firstName = 'Ivan';
+const lastName = 'Spishniak';
 
 // 1. concat first and last name, to create full name e.g (Vitalii Danchul)
-const fullName = '';
+const fullName = firstName + ' ' + lastName;
 
 console.log('1: ', fullName);
 
