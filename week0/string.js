@@ -9,8 +9,17 @@ const fullName = firstName + ' ' + lastName;
 console.log('1: ', fullName);
 
 // 2. log fullName third character. Please, use more than one solution
-console.log('2.1: ', );
-console.log('2.2: ', );
+
+
+console.log('2.1:', fullName[2]);
+console.log('2.2:', fullName.slice(2, 3));
+console.log('2.3:', fullName.split('')[2]);
+console.log('2.4:', ...fullName.split('').filter((character, index) => {
+    if (index === 2) {
+        return true;
+    }
+    return false;
+}));
 
 
 // 3. replace all vowels in fullName with number
