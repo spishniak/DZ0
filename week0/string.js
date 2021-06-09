@@ -41,7 +41,7 @@ console.log('4:',result );
 
 // 5. log part of fullName from 3 to 7 character
 
-console.log('5: ', );
+console.log('5:', replaced.slice(3,7) );
 
 // 6. Divide replaced string by number 10
 
