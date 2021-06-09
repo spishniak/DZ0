@@ -24,9 +24,9 @@ console.log('2.4:', ...fullName.split('').filter((character, index) => {
 
 // 3. replace all vowels in fullName with number
 const number = 10;
-const replaced = fullname.****(*****);
+const replaced = fullName.replace(/[aeiou]/ig, 10);
 
-console.log('3: ', );
+console.log('3:',replaced );
 
 
 // 4. check if replaced string on position 8 ends with number 10
