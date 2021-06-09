@@ -31,7 +31,13 @@ console.log('3:',replaced );
 
 // 4. check if replaced string on position 8 ends with number 10
 
-console.log('4: ', );
+let result;
+if (replaced.slice(8,10) === '10'){
+    result = 'string on position 8 ends with number 10'
+}else{
+    result = 'No'
+}
+console.log('4:',result );
 
 // 5. log part of fullName from 3 to 7 character
 
