@@ -1,36 +1,31 @@
 const request = require('request');
 
-const getUsers = () => {
-    return new Promise((resolve, reject) => {
-        request('https://jsonplaceholder.typicode.com/users', (error, response, body) => {
-            if (error || response.statusCode !== 200) reject(error);
+const getUsers = () => new Promise((resolve, reject) => {
+  request('https://jsonplaceholder.typicode.com/users', (error, response, body) => {
+    if (error || response.statusCode !== 200) reject(error);
 
-            resolve(JSON.parse(body));
-        });
-    });
-};
+    resolve(JSON.parse(body));
+  });
+});
 
-const getComments = () => {
-    return new Promise((resolve, reject) => {
-        request('https://jsonplaceholder.typicode.com/comments', (error, response, body) => {
-            if (error || response.statusCode !== 200) reject(error);
+const getComments = () => new Promise((resolve, reject) => {
+  request('https://jsonplaceholder.typicode.com/comments', (error, response, body) => {
+    if (error || response.statusCode !== 200) reject(error);
 
-            resolve(JSON.parse(body));
-        });
-    });
-};
+    resolve(JSON.parse(body));
+  });
+});
 
 (async () => {
-    const [users, comments] = await Promise.all([
-        await getUsers(),
-        await getComments()
-    ]).catch((error) => {
-        throw new Error(error);
-    })
-    console.log(users[0]);
-    console.log(comments[0]);
-})()
-
+  const [users, comments] = await Promise.all([
+    await getUsers(),
+    await getComments(),
+  ]).catch((error) => {
+    throw new Error(error);
+  });
+  console.log(users[0]);
+  console.log(comments[0]);
+})();
 
 // 1. Rewrite getUsers to async/await
 /**
