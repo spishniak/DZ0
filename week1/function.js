@@ -30,7 +30,7 @@ const result = ((date) => {
     return `${fullDate}, odd`;
 })(new Date());
 
-console.log(result);
+console.log(answer);
 
 // 2. Rewrite this function to ES6/ES2015
 
