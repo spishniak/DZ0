@@ -9,7 +9,7 @@ console.log('1: ', )
 // 2. Create new object from "obj" and add to newly created param "c" with value "3".
 // Original "obj" shouldn't be modified
 
-const obj2 = ****;
+// const obj2 = ****;
 
 console.log(obj); // output {a: 1, b: 2};
 console.log(obj2) // should return {a: 1, b: 2, c: 3}
